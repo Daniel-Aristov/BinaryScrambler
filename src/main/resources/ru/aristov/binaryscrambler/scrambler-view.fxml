@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="600.0"
+            style="-fx-background-color: #212836;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.aristov.binaryscrambler.MainController">
+  <children>
+    <TextField fx:id="inputSequence" focusTraversable="false" layoutX="26.0" layoutY="41.0" prefHeight="34.0" prefWidth="555.0" promptText="100010110111010001010110001011101000011010">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </TextField>
+    <Label layoutX="26.0" layoutY="14.0" text="Введите бинарную последовательность для скремблирования:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold Italic" size="14.0" />
+      </font>
+    </Label>
+    <Button fx:id="btnScramble" layoutX="146.0" layoutY="154.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #DB4900;" text="Скремблировать" textFill="#0b1021">
+      <font>
+        <Font name="Arial Bold" size="13.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <Button fx:id="btnClear" layoutX="306.0" layoutY="154.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="142.0" style="-fx-background-color: #DB4900;" text="Очистить" textFill="#0b1021">
+      <font>
+        <Font name="Arial Bold" size="13.0" />
+      </font>
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <Label layoutX="26.0" layoutY="102.0" text="Выберите формулу скремблера:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold Italic" size="14.0" />
+      </font>
+    </Label>
+    <Label layoutX="26.0" layoutY="294.0" text="Последовательность после скремблирования:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label layoutX="28.0" layoutY="235.0" text="Исходная последовательность:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label layoutX="28.0" layoutY="356.0" text="Последовательность после дескремблирования:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="countUnits" layoutX="28.0" layoutY="444.0" text="Максимальное количество подряд идущих единиц:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="countZero" layoutX="28.0" layoutY="466.0" text="Максимальное количество подряд идущих нулей:" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="inputStr" layoutX="28.0" layoutY="257.0" prefHeight="16.0" prefWidth="555.0" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="scramblerStr" layoutX="26.0" layoutY="317.0" prefHeight="16.0" prefWidth="555.0" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label fx:id="descramblerStr" layoutX="28.0" layoutY="379.0" prefHeight="16.0" prefWidth="555.0" textFill="WHITE">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <ComboBox fx:id="inputFormula" layoutX="279.0" layoutY="93.0" prefHeight="34.0" prefWidth="302.0" promptText="1. B(i) = А(i) ⊕ B(i-3) ⊕ B(i-5)" visibleRowCount="5">
+      <cursor>
+        <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
+    <Label fx:id="incorrectMassage" layoutX="106.0" layoutY="202.0" textFill="RED">
+      <font>
+        <Font name="Arial Bold" size="18.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
